@@ -1,0 +1,15 @@
+<p>Name: <%= @artist.name %></p>
+<p>Bio: <%= @artist.bio %></p>
+<p>Genre: <%= @artist.genre %></p>
+
+
+<% @artist.photos.each do |photo| %>
+  <%= image_tag photo.image %>
+<% end %>
+
+<%= render 'songs/list' %>
+
+<%= link_to 'All Artists', artists_path %>
+<%= link_to 'Update Artist', edit_artist_path %>
+<%= link_to 'Add a new song', new_artist_song_path(@artist.id) %>
+<%= link_to 'Delete', artist_path(@artist), method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
