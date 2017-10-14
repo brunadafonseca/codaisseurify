@@ -8,4 +8,8 @@ RSpec.describe Song, type: :model do
       expect(song.errors).to have_key(:name)
     end
   end
+
+  describe "association with artist" do
+    it { is_expected.to belong_to :artist }
+  end
 end
