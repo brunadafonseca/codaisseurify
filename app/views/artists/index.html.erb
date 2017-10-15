@@ -1,20 +1,22 @@
-<div class="artists-index">
-  <% @artists.each do |artist| %>
-    <div class="artist">
-      <div class="artist-photo">
-        <% if !artist.photos.first.nil? %>
-          <%= image_tag artist.photos.first.image.list_item %>
-        <% end %>
-      </div>
-      <div class="artist-details">
-        <p class="artist-name"><%= artist.name %></p>
-        <p class="genre"><%= artist.genre %></p>
-        <div class="artist-actions">
-          <%= link_to 'Show', artist %>
-          <%= link_to 'Edit', edit_artist_path(artist) %>
-          <%= link_to 'Delete', artist, method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+<div class="show-pages">
+  <div class="artists-index">
+    <% @artists.each do |artist| %>
+      <div class="artist">
+        <div class="artist-photo">
+          <% if !artist.photos.first.nil? %>
+            <%= image_tag artist.photos.first.image.list_item %>
+          <% end %>
+        </div>
+        <div class="artist-details">
+          <p class="artist-name"><%= artist.name %></p>
+          <p class="genre"><%= artist.genre %></p>
+          <div class="artist-actions">
+            <%= link_to 'Show', artist %>
+            <%= link_to 'Edit', edit_artist_path(artist) %>
+            <%= link_to 'Delete', artist, method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

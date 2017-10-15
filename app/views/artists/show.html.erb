@@ -1,30 +1,32 @@
-<div class="container">
-  <div class="artist-photos">
-    <% @artist.photos.each do |photo| %>
-      <div class="artist-photo">
-        <%= image_tag photo.image.thumbnail %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="artist-info">
-    <div class="artist-buttons">
-      <%= link_to 'Edit', edit_artist_path, class: "btn btn-primary" %>
-      <%= link_to 'Add song', new_artist_song_path(@artist.id), class: "btn btn-primary" %>
-      <%= link_to 'Delete', artist_path(@artist), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+<div class="show-pages">
+  <div class="container">
+    <div class="artist-photos">
+      <% @artist.photos.each do |photo| %>
+        <div class="artist-photo">
+          <%= image_tag photo.image.thumbnail %>
+        </div>
+      <% end %>
     </div>
 
-    <h1><%= @artist.name %></h1>
+    <div class="artist-info">
+      <div class="artist-buttons">
+        <%= link_to 'Edit', edit_artist_path, class: "btn btn-primary" %>
+        <%= link_to 'Add song', new_artist_song_path(@artist.id), class: "btn btn-primary" %>
+        <%= link_to 'Delete', artist_path(@artist), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+      </div>
 
-    <span class="artist-genre">Genre: <%= @artist.genre %></span>
+      <h1><%= @artist.name %></h1>
 
-    <% if @artist.bio.present? %>
-      <h2>Biography</h2>
-      <p><%= @artist.bio %></p>
-    <% end %>
+      <span class="artist-genre">Genre: <%= @artist.genre %></span>
 
-    <div class="songs">
-      <%= render 'songs/list' %>
+      <% if @artist.bio.present? %>
+        <h2>Biography</h2>
+        <p><%= @artist.bio %></p>
+      <% end %>
+
+      <div class="songs">
+        <%= render 'songs/list' %>
+      </div>
     </div>
   </div>
 </div>

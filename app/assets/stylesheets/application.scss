@@ -2,17 +2,11 @@
 @import "bootstrap";
 
 .container-fluid {
-  margin-top: 50px;
-  background-color: #f3f3f3;
-  padding: 50px 0;
+  padding: 0;
 }
 
 .container {
   max-width: 900px;
-
-  .show-photos img {
-    max-width: 400px;
-  }
 }
 
 .navbar {
@@ -32,7 +26,6 @@
 /* form styles */
 
 html {
-    background-color: #f3f3f3;
     height: 100%;
 }
 
@@ -43,13 +36,41 @@ body {
 }
 
 #homepage {
-  background-image: url('http://res.cloudinary.com/dyyxiefx5/image/upload/v1507934953/codaisseurify/photo-1483412033650-1015ddeb83d1.jpg');
-  box-shadow: inset 0 0 0 100px rgba(36, 70, 105, 0.74);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('http://res.cloudinary.com/dyyxiefx5/image/upload/v1507934953/codaisseurify/photo-1483412033650-1015ddeb83d1.jpg');
   background-size: cover;
   width: 100%;
   height: 100%;
   min-height: 600px;
   position: relative;
+  text-align: center;
+
+  .home-header {
+    padding-top: 250px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 400;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 24px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 20px;
+  }
 }
 
 .form-basic{
@@ -163,6 +184,10 @@ body {
     user-select: none;
     color: #333;
     border-color: #adadad;
+}
+
+.show-pages {
+  margin-top: 100px;
 }
 
 .artists-index {
