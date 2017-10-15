@@ -1,16 +1,4 @@
-
-
-
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @artists.each do |artist| %>
   <tr>
     <td><%=  artist.name %></td>
@@ -23,7 +11,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New artist', new_artist_path %>

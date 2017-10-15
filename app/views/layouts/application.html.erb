@@ -5,10 +5,15 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'https://cdn.rawgit.com/jimoong/mosaigrid/master/css/grid.css', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'https://cdn.rawgit.com/jimoong/mosaigrid/master/js/grid.js' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

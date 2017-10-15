@@ -1,15 +1,25 @@
-<p>Name: <%= @artist.name %></p>
-<p>Bio: <%= @artist.bio %></p>
-<p>Genre: <%= @artist.genre %></p>
+<div class="container">
+  <div class="row">
+    <h1>Name: <%= @artist.name %></h1>
+    <h6>Genre: <%= @artist.genre %></h6>
+    <p>Bio: <%= @artist.bio %></p>
+  </div>
 
+  <div class="row">
+    <div class="artist col">
+      <% @artist.photos.each do |photo| %>
+        <%= image_tag photo.image %>
+      <% end %>
 
-<% @artist.photos.each do |photo| %>
-  <%= image_tag photo.image %>
-<% end %>
+      <div class="buttons">
+        <%= link_to 'Update Artist', edit_artist_path %>
+        <%= link_to 'Add a new song', new_artist_song_path(@artist.id) %>
+        <%= link_to 'Delete', artist_path(@artist), method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+      </div>
+    </div>
 
-<%= render 'songs/list' %>
-
-<%= link_to 'All Artists', artists_path %>
-<%= link_to 'Update Artist', edit_artist_path %>
-<%= link_to 'Add a new song', new_artist_song_path(@artist.id) %>
-<%= link_to 'Delete', artist_path(@artist), method: :delete, data: { confirm: "Are you sure you want to delete this artist?" } %>
+    <div class="songs col">
+      <%= render 'songs/list' %>
+    </div>
+  </div>
+</div>
