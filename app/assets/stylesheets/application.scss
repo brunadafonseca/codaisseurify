@@ -2,8 +2,17 @@
 @import "bootstrap";
 
 .container-fluid {
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: #f3f3f3;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 900px;
+
+  .show-photos img {
+    max-width: 400px;
+  }
 }
 
 .navbar {
@@ -11,10 +20,36 @@
   color: #fff;
 }
 
+.navbar-brand {
+  color: #fff;
+  font-size: 18px;
+}
+
+.navbar-default {
+  color: #fff;
+}
+
 /* form styles */
 
 html {
     background-color: #f3f3f3;
+    height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+#homepage {
+  background-image: url('http://res.cloudinary.com/dyyxiefx5/image/upload/v1507934953/codaisseurify/photo-1483412033650-1015ddeb83d1.jpg');
+  box-shadow: inset 0 0 0 100px rgba(36, 70, 105, 0.74);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
 }
 
 .form-basic{
@@ -128,4 +163,110 @@ html {
     user-select: none;
     color: #333;
     border-color: #adadad;
+}
+
+.artists-index {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.artist {
+  width: 600px;
+  border: 1px solid #000;
+  position: relative;
+  margin: 20px;
+}
+
+.artist-photo {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.artist-details {
+  display: inline-block;
+  position: absolute;
+  top:10px;
+  text-align: center;
+  width: 450px;
+}
+
+.change-buttons {
+  display: inline-block;
+}
+
+.artist-name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.genre {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.artist-actions {
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+    margin: 0 20px;
+  }
+}
+
+.artist-buttons {
+  text-align: right;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.artist-photos {
+  float: left;
+  width: 40%;
+  padding: 20px;
+  font-size: 0;
+
+  .artist-photo {
+    overflow: hidden;
+    border: 5px solid #4a4a4a;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+.artist-info {
+  float: right;
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.artist-genre {
+  color: #777;
+  font-style: italic;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }

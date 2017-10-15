@@ -6,7 +6,12 @@
     </ul>
   <% end %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
+  <div class="form-row">
+    <label>
+      <span><%= f.label :name %></span>
+      <%= f.text_field :name, class: "input" %>
+  </div>
+  <div class="form-row">
+    <%= f.submit class: "submit-button" %>
+  </div>
 <% end %>

@@ -1,9 +1,6 @@
-<div id="photos">
-  <% @artists.each do |artist| %>
-    <div class="artist">
-      <% artist.photos.each do |photo| %>
-        <%= link_to image_tag(photo.image), artist_path(artist.id) %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+  <div id="homepage">
+    <h1>codaisseurify</h1>
+    <h3> We love music </h3>
+    <%= link_to 'Browse artists', artists_path %>
+    <%= link_to 'Add artists', new_artist_path %>
+  </div>

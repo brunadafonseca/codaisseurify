@@ -4,16 +4,14 @@
     <title>Codaisseurify</title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Nunito:200i,400,700' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= stylesheet_link_tag    'https://cdn.rawgit.com/jimoong/mosaigrid/master/css/grid.css', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'https://cdn.rawgit.com/jimoong/mosaigrid/master/js/grid.js' %>
+
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
-    <div class="container-fluid">
       <%= yield %>
-    </div>
   </body>
 </html>
