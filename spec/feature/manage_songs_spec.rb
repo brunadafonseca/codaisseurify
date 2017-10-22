@@ -22,7 +22,7 @@ feature 'Manage songs', js: true do
   scenario 'delete one song', js: true do
     set_test
 
-    find('.delete-button', :visible => false).click
+    find('.delete-button').click
 
     expect(page).to have_content("This artist has no songs yet")
   end
