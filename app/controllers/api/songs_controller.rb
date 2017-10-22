@@ -37,7 +37,7 @@ class Api::SongsController < ApplicationController
   end
 
   def destroy_all
-    artist = Artist.find(params[:id])
+    artist = Artist.find(params[:artist_id])
     songs = artist.songs
     songs.destroy_all
 

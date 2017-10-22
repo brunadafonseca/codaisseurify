@@ -1,8 +1,9 @@
 <h3>Songs:</h3>
+<button type="button" id="delete-all">Delete all songs</button>
 <ul id="songs-list">
   <% if @songs.present? %>
     <% @songs.each do |song| %>
-      <li id="song-<%= song.id %>"><%= song.name %><button class="delete-button">x</button></li>
+      <li data-id="<%= song.id %>"><%= song.name %><button class="delete-button">x</button></li>
     <% end %>
   <% end %>
 </ul>

@@ -6,12 +6,13 @@
 
     <%= stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Nunito:200i,400,700' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+
 
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
-      <%= yield %>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
