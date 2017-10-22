@@ -1,5 +1,7 @@
 <h3>Songs:</h3>
-<button type="button" id="delete-all">Delete all songs</button>
+<p id="empty-list">This artist has no songs yet.</p>
+<%= render 'songs/form' %>
+
 <ul id="songs-list">
   <% if @songs.present? %>
     <% @songs.each do |song| %>
@@ -7,6 +9,8 @@
     <% end %>
   <% end %>
 </ul>
+
+<button type="button" id="delete-all">Delete all songs</button>
 
 <script>
   var artistId = <%= @artist.id %>;
