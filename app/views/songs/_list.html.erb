@@ -1,9 +1,12 @@
-<% if @songs.present? %>
-  <h3>Songs:</h3>
-  <ul>
+<h3>Songs:</h3>
+<ul id="songs-list">
+  <% if @songs.present? %>
     <% @songs.each do |song| %>
-      <li><%= song.name %></li>
-      <%= link_to 'Delete', artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure you want to delete this song?" } %>
+      <li id="song-<%= song.id %>"><%= song.name %><button class="delete-button">x</button></li>
     <% end %>
-  </ul>
-<% end %>
+  <% end %>
+</ul>
+
+<script>
+  var artistId = <%= @artist.id %>;
+</script>
