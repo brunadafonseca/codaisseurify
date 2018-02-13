@@ -1,24 +1,36 @@
-# README
+# Codaisseurify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was the first individual assignment for Codaisseur Academy.
 
-Things you may want to cover:
+![home page](http://bit.ly/2o5pHB9)
 
-* Ruby version
+![artists page](http://bit.ly/2o3pvCL)
 
-* System dependencies
+### User stories for this project:
 
-* Configuration
++ As a user I can to add, edit, delete songs from an artist.
 
-* Database creation
++ As a user I can add photos to an artists's page
 
-* Database initialization
++ As a user I can to delete all songs from an artists at once (because why not)
 
-* How to run the test suite
++ As a user I can edit or delete artists
 
-* Services (job queues, cache servers, search engines, etc.)
++ As a user I can view a list of artists
 
-* Deployment instructions
+#### Other requirements:
 
-* ...
++ Nested routes
+
++ [Cloudinary](https://cloudinary.com/) and [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) for the images upload
+
+
+Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed.
+
+```bash
+git clone git@github.com:brunadafonseca/codaisseurify.git
+cd codaisseurify
+bundle install
+rails db:create db:migrate db:seed
+rails server
+```
