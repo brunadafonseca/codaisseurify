@@ -47,7 +47,6 @@ function submitSong(event) {
 
 function removeSongFromDOM(item) {
   item.remove();
-  toggleListStatus();
 }
 
 function deleteSong(event) {
@@ -59,13 +58,17 @@ function deleteSong(event) {
     method: 'DELETE',
   }).success(function () {
     removeSongFromDOM(listItem);
+    toggleListStatus();
   }).fail(function () {
     alert('Could not delete song.');
   });
 }
 
 function removeSongsFromDOM() {
-  songsList.html("");
+  var items = songsList.children();
+  for (var i = 0; i < items.length; i++) {
+    removeSongFromDOM(items[i]);
+  }
 }
 
 function deleteAllSongs() {
